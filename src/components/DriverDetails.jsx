@@ -1,6 +1,9 @@
 import React from "react";
 
-export default function DriverDetails () {
+export default function DriverDetails ({driver}) {
+    if(!driver) return null;
+    
+    const {name, age, country, user_name, bio, car} = driver;
 
     return (
         <div>
