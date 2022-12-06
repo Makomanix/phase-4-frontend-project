@@ -13,7 +13,7 @@ export default function DriversContainer ({API}) {
         fetch(`/drivers`)
         .then((res) => res.json())
         .then((drivers) => setDrivers(drivers));
-    },[])
+    },[setDrivers])
 
     const selectedDriver = drivers.find((driver) => driver.id === selectedDriverId)
 
