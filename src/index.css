@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 
+@font-face {
+  font-family: 'FasterOne';
+  src: local('FasterOne'), url('./fonts/FasterOne-Regular.ttf') format('truetype');
+}
+
 @layer base {
   li{
     @apply text-2xl text-orange-500 pl-32

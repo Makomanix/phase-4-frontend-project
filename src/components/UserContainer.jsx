@@ -2,25 +2,32 @@ import React, {useState, useEffect} from "react";
 import UserProfile from "./UserProfile"
 import UserLeaderboard from "./UserLeaderboard"
 import UserTimes from "./UserTimes"
+import TracksContainer from "./TracksContainer";
+import DriversContainer from "./DriversContainer";
 
 const API = "http://localhost:3000"
 
 export default function UserContainer () {
     const [user, setUser] = useState([])
 
-    useEffect(() => {
-        fetch(`${API}/drivers/${id}`)
-        .then((res) => res.json())
-        .then((user) => setUser(user))
-    },[])
+    // useEffect(() => {
+    //     fetch(`${API}/drivers/${id}`)
+    //     .then((res) => res.json())
+    //     .then((user) => setUser(user))
+    // },[])
 
 
 
     return (
         <div>
-            <UserProfile user={user}/>
-            <UserTimes user={user}/>
-            <UserLeaderboard user={user}/>
+            <h1 className="text-center font-bold pt-2">Welcome Drive #1</h1>
+            <div>
+                <TracksContainer/>
+                <DriversContainer/>
+                <UserProfile user={user}/>
+                <UserTimes user={user}/>
+                <UserLeaderboard user={user}/>
+            </div>
         </div>
     )
 }

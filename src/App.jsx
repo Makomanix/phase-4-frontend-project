@@ -3,16 +3,17 @@ import {Routes, Route} from 'react-router-dom'
 import UserContainer from './components/UserContainer';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
-import DriverDetails from './components/DriverDetails';
 import TracksContainer from './components/TracksContainer';
-import TrackDetails from './components/TrackDetails';
 import DriversContainer from './components/DriversContainer';
+import NavBar from './components/NavBar';
 
 
 
 function App() {
   return (
     <div>
+      <NavBar></NavBar>
+      <UserContainer></UserContainer>
       <Routes>
         <Route path='/' element={<UserContainer />} />
         <Route path='/login' element={<Login />} />
