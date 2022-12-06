@@ -10,7 +10,7 @@ export default function TracksContainer ({API}) {
     const [ selectedTrackId, setSelectedTrackId ] = useState(null)
 
     useEffect(() => {
-        fetch(`${API}/tracks`)
+        fetch(`/tracks`)
         .then((res) => res.json())
         .then((tracks) => setTracks(tracks));
     },[tracks])

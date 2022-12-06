@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
+import UserContainer from "./UserContainer";
 
 const emptyForm = {
     name: "",
@@ -16,7 +17,7 @@ export default function SignUp () {
     const navigate = useNavigate();
     
     useEffect(() => {
-        fetch(`${API}/drivers`)
+        fetch(`/drivers`)
         .then((res) => res.json())
         .then((drivers) => setDrivers(drivers));
     },[drivers])
@@ -35,7 +36,7 @@ export default function SignUp () {
     
     const handleSubmit = (e) => {
       e.preventDefault();
-      fetch(`http://localhost:3000/drivers`, {
+      fetch(`/drivers`, {
         method: 'POST',
         headers: {
           "Content-type": "application/json",
