@@ -13,7 +13,7 @@ export default function TracksContainer ({API}) {
         fetch(`/tracks`)
         .then((res) => res.json())
         .then((tracks) => setTracks(tracks));
-    },[tracks])
+    },[])
 
     const addTrack = (newTrack) => {
         setTracks(tracks => [...tracks,newTrack])

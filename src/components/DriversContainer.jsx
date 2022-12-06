@@ -10,10 +10,10 @@ export default function DriversContainer ({API}) {
 
 
     useEffect(() => {
-        fetch(`${API}/drivers`)
+        fetch(`/drivers`)
         .then((res) => res.json())
         .then((drivers) => setDrivers(drivers));
-    },[drivers])
+    },[])
 
     const selectedDriver = drivers.find((driver) => driver.id === selectedDriverId)
 

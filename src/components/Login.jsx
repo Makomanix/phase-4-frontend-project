@@ -16,8 +16,8 @@ export default function Login () {
     // }
     return (
         <div>
-            <button>LOGIN</button>
-            {/* <Login>SIGNUP</Login> //route to sign up page */}
+            <button className="absolute top-1/2">LOGIN</button>
+            <button>SIGNUP</button>
         </div>
     )
 }
