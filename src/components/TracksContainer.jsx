@@ -17,7 +17,7 @@ export default function TracksContainer ({API}) {
 
     const addTrack = (newTrack) => {
         setTracks(tracks => [...tracks,newTrack])
-      }
+    }
 
     const selectedTrack = tracks.find((track) => track.id === selectedTrackId)
     
