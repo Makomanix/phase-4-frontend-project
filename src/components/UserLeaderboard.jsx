@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
 
-const API = "http://localhost:3000"
+// const API = "http://localhost:3000"
 
-export default function UserLeaderboard () {
+export default function UserLeaderboard ({API}) {
     const [drivers, setDrivers] = useState([])
     // const [tracks, setTracks] = useState([])
     // const [combinedData, setCombinedData] = useState([])
@@ -28,20 +28,10 @@ export default function UserLeaderboard () {
         .then((drivers) => setDrivers(drivers));
     },[])
 
+    const recentDrivers = drivers.sort().slice(0,10)
 
     //make dropdown to select track then have component filter times by order from lowest to highest
-//    if (drivers) {
-//     driversToDisplay = driversToDisplay.filter((driver) => 
-//         driver.time_trial
-//     )
-//    }
 
-//    if (tracks) {
-//     tracksToDisplay = tracksToDisplay.filter((track) => 
-//         track.time_trial
-//     )
-//    }
-      
     return (
     <div>
         <button></button>

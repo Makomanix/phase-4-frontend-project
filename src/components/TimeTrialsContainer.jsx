@@ -6,13 +6,16 @@ import Signup from "./Signup";
 
 
 function TimeTrialsContainer() {
-return (
+
+    const API = "http://localhost:3000"
+
+    return (
     <div>
         {/* might need to add signup and login component as a ternary here instead of user */}
         {/* Signedup ? <Signup/> : <Login /> */}
-        <UserContainer/>
-        <TracksContainer/>
-        <DriversContainer/>
+        <UserContainer API={API}/>
+        <TracksContainer API={API}/>
+        <DriversContainer API={API}/>
     </div>
     )
 }

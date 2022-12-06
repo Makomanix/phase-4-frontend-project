@@ -5,16 +5,16 @@ import UserTimes from "./UserTimes"
 import TracksContainer from "./TracksContainer";
 import DriversContainer from "./DriversContainer";
 
-const API = "http://localhost:3000"
+// const API = "http://localhost:3000"
 
-export default function UserContainer () {
+export default function UserContainer ({API}) {
     const [user, setUser] = useState([])
 
-    // useEffect(() => {
-    //     fetch(`${API}/drivers/${id}`)
-    //     .then((res) => res.json())
-    //     .then((user) => setUser(user))
-    // },[])
+    useEffect(() => {
+        fetch(`${API}/drivers/${id}`)
+        .then((res) => res.json())
+        .then((user) => setUser(user))
+    },[])
 
 
 
@@ -26,7 +26,7 @@ export default function UserContainer () {
                 <DriversContainer/>
                 <UserProfile user={user}/>
                 <UserTimes user={user}/>
-                <UserLeaderboard user={user}/>
+                <UserLeaderboard user={user} API={API}/>
             </div>
         </div>
     )

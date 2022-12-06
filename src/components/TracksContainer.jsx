@@ -3,9 +3,9 @@ import TracksCollection from "./TracksCollection";
 import TrackDetails from "./TrackDetails";
 import TrackForm from "./TrackForm";
 
-const API = "http://localhost:3000"
+// const API = "http://localhost:3000"
 
-export default function TracksContainer () {
+export default function TracksContainer ({API}) {
     const [ tracks, setTracks ] = useState([])
     const [ selectedTrackId, setSelectedTrackId ] = useState(null)
 

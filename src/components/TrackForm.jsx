@@ -21,7 +21,7 @@ export default function TrackForm ({addTrack}) {
     
     const handleSubmit = (e) => {
       e.preventDefault();
-      fetch(`http://localhost:8004/tracks`, {
+      fetch(`http://localhost:3000/tracks`, {
         method: 'POST',
         headers: {
           "Content-type": "application/json",

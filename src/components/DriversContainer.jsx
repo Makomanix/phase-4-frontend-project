@@ -2,9 +2,9 @@ import React, {useState, useEffect} from "react";
 import DriverCollection from "./DriversCollection"
 import DriverDetails from "./DriverDetails"
 
-const API = "http://localhost:3000"
+// const API = "http://localhost:3000"
 
-export default function DriversContainer () {
+export default function DriversContainer ({API}) {
     const [ drivers, setDrivers ] = useState([])
     const [ selectedDriverId, setSelectedDriverId ] = useState(null)
 
