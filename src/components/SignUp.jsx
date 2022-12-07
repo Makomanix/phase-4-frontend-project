@@ -53,15 +53,17 @@ export default function SignUp () {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-            <input 
-            placeholder="signup or something" 
-            name="user_name" 
-            value={formData.user_name} 
-            onChange={handleChange}
-            />
-            </form>
-            <UserContainer drivers={drivers}/>
+            <div>
+                <form onSubmit={handleSubmit}>
+                <input 
+                placeholder="signup or something" 
+                name="user_name" 
+                value={formData.user_name} 
+                onChange={handleChange}
+                />
+                </form>
+                <UserContainer drivers={drivers}/>
+            </div>
         </div>
     )
 }
