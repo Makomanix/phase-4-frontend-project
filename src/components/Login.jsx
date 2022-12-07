@@ -56,16 +56,16 @@ export default function Login () {
         setFormData({ ...formData, [name]: value })
         }
     return (
-        <div>
-            <form onSubmit={onSubmit} className="absolute top-1/2" >
-                <label>Username:</label>
+        <div >
+            <form className="flex flex-col justify-center items-center space-y-3 h-screen w-auto" onSubmit={onSubmit} >
+                <label className="border-spacing-2">Username:</label>
                 <input type='username' name='username'value={username} onChange={handleChange}/>
                 <label>Password:</label>
                 <input type='password' name='password' value={password} onChange={handleChange}/>
                 <button  value='Log in!'>Log In!</button>
+                <button>SIGNUP</button>
             </form>
             {errors? <div>{errors}</div>:null}
-            <button>SIGNUP</button>
         </div>
     )
 }
