@@ -34,9 +34,7 @@ export default function TrackForm ({addTrack}) {
     });
       setFormData(emptyForm)
     }
-   
-   
-   
+    
     return (
         <div>
             

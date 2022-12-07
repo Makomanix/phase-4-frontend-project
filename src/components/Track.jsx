@@ -8,13 +8,15 @@ export default function Track ({id, track, onClickTrack}) {
     }
 
     return (
-    <div>
-        {name}
-        {location}
-        {length}
-        {year_of_construction}
-        {history}
-        <button onClick={handleClick}/>
-    </div>
+        <div className="grid grid-cols-1 grid-rows-3 w-auto h-auto bg-slate-400 mx-2 rounded-xl outline pb-2">
+            <div className='text-center font-bold'>{name}</div>
+            <div className='text-center font-bold text-yellow-400'>{location}</div>
+            <div className="hidden">
+                {length}
+                {year_of_construction}
+                {history}
+            </div>
+            <button className='text-center font-semibold mx-4' onClick={handleClick}>Details</button>
+        </div>
     )
 }

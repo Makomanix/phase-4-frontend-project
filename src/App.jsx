@@ -12,7 +12,7 @@ import NavBar from './components/NavBar';
 function App() {
   return (
     <div className="bg-slate-200">
-      <NavBar></NavBar>
+      <NavBar/>
       <Routes>
         <Route path='/' element={<UserContainer />} />
         <Route path='/login' element={<Login />} />
@@ -20,6 +20,7 @@ function App() {
         <Route path='/drivers' element={<DriversContainer />} />
         <Route path='/tracks' element={<TracksContainer />} />
       </Routes>
+      
         
     </div>  
   );

@@ -29,10 +29,16 @@ export default function TracksContainer ({API}) {
     return ( 
     <div>
         {/* hide TrackDetails until a track is selected  */}
+        <div>
         <TrackDetails track={selectedTrack} />
+        </div>
+        <div>
         {/* TrackForm only visible to Admin so ternary is needed */}
         <TrackForm addTrack={addTrack}/>
+        </div>
+        <div>
         <TracksCollection tracks={tracks} onClickTrack={handleSelectTrack}/>
+        </div>
     </div>
     )
 }
