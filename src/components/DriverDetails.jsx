@@ -7,7 +7,12 @@ export default function DriverDetails ({driver}) {
 
     return (
         <div>
-            
+            {/* {name} 
+            {age} 
+            {country} 
+            {user_name} 
+            {bio} 
+            {car} */}
         </div>
     )
 }

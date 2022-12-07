@@ -4,6 +4,7 @@ import UserLeaderboard from "./UserLeaderboard"
 import UserTimes from "./UserTimes"
 import TracksContainer from "./TracksContainer";
 import DriversContainer from "./DriversContainer";
+import NavBar from "./NavBar";
 
 // const API = "http://localhost:3000"
 

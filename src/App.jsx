@@ -20,9 +20,8 @@ function App() {
         <Route path='/drivers' element={<DriversContainer />} />
         <Route path='/tracks' element={<TracksContainer />} />
       </Routes>
-    </div>
-      
-    
+        
+    </div>  
   );
 }
 

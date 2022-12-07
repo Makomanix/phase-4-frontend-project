@@ -8,14 +8,14 @@ export default function Driver ({id, driver, onClickDriver}) {
     }
 
     return (
-    <div>
-        <button onClick={handleClick}/>
+    <div className='container justify-around'>
         {name}
         {age}
         {country}
         {user_name}
         {bio}
         {car}
+        <button className=''onClick={handleClick}>Details</button>
     </div>
     )
 }

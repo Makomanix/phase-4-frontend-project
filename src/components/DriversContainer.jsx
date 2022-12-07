@@ -17,12 +17,18 @@ export default function DriversContainer ({API}) {
 
     const selectedDriver = drivers.find((driver) => driver.id === selectedDriverId)
 
+    const handleSelectDriver = (driver) => {
+        setSelectedDriverId(driver.id)
+    }
 
     return (
         <div>
-            {/* hide details component until a driver is selected from the collection */}
-            <DriverDetails driver={selectedDriver}/>
-            <DriverCollection drivers={drivers} onClickDriver={setSelectedDriverId}/>
+            <div>
+                <DriverDetails driver={selectedDriver}/>
+            </div>
+            <div>
+                <DriverCollection drivers={drivers} onClickDriver={handleSelectDriver}/>
+            </div>
         </div>
     )
 }

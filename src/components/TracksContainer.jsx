@@ -20,6 +20,11 @@ export default function TracksContainer ({API}) {
     }
 
     const selectedTrack = tracks.find((track) => track.id === selectedTrackId)
+
+
+    const handleSelectTrack = (track) => {
+        setSelectedTrackId(track.id)
+    }
     
     return ( 
     <div>
@@ -27,7 +32,7 @@ export default function TracksContainer ({API}) {
         <TrackDetails track={selectedTrack} />
         {/* TrackForm only visible to Admin so ternary is needed */}
         <TrackForm addTrack={addTrack}/>
-        <TracksCollection tracks={tracks} onClickTrack={setSelectedTrackId}/>
+        <TracksCollection tracks={tracks} onClickTrack={handleSelectTrack}/>
     </div>
     )
 }
