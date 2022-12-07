@@ -14,8 +14,8 @@ export default function DriversCollection ({drivers, onClickDriver}) {
     )
 
     return (
-      <div className='absolute bottom-[10%]'>
-        <div className="grid overflow-hidden xl grid-cols-5 grid-rows-2 gap-5 gap-x-5 gap-y-6 grid-flow-row w-auto h-auto">
+      <div className ="absolute inset-x-0 bottom-36 h-12">
+        <div className="grid grid-cols-5 grid-rows-auto py-1 gap-y-3">
           {driverCards}
         </div>
       </div>

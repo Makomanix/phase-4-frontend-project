@@ -12,7 +12,7 @@ export default function NavBar () {
     //     setIfUser(ifUser => !ifUser)
     // }
     return (
-        <div className=" w-screen h-[60px] z-10 bg-zinc-300 fixed drop-shadow-lg">
+        <div className=" w-screen h-[60px] z-10 bg-slate-400 fixed drop-shadow-lg">
                 <h1 className='font-bold text-center text-4xl mt-2'>FrontRunner</h1>
                 {/* <button onClick={handleShowLogin}>Don't have an account? click here</button> */}
                 {/* {showLogin ? <Login /> : <Signup />} */}

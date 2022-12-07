@@ -8,14 +8,16 @@ export default function Driver ({id, driver, onClickDriver}) {
     }
 
     return (
-    <div className='container justify-around'>
-        {name}
-        {age}
-        {country}
-        {user_name}
-        {bio}
-        {car}
-        <button className=''onClick={handleClick}>Details</button>
+        <div className="grid grid-cols-1 grid-rows-3 w-auto h-auto bg-slate-400 mx-2 rounded-xl outline pb-2">
+            <div className='text-center font-bold'>{name}</div>
+            <div className='text-center font-bold text-yellow-400'>{country}</div>
+            <div className="hidden">
+                {age}
+                {user_name}
+                {bio}
+                {car}
+            </div>
+        <button className='text-center font-semibold mx-4'onClick={handleClick}>Details</button>
     </div>
     )
 }

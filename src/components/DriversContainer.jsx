@@ -22,7 +22,7 @@ export default function DriversContainer ({API}) {
     }
 
     return (
-        <div>
+        <div >
             <div>
                 <DriverDetails driver={selectedDriver}/>
             </div>

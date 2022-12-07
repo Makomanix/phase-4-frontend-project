@@ -11,7 +11,7 @@ import NavBar from './components/NavBar';
 
 function App() {
   return (
-    <div>
+    <div className="bg-slate-200">
       <NavBar></NavBar>
       <Routes>
         <Route path='/' element={<UserContainer />} />
