@@ -1,14 +1,15 @@
-import React from "react";
-import Driver from "./Driver";
+import React, { useEffect } from "react";
+import TimeTrial from "./TimeTrial";
 
 export default function UserTimes ({user}) {
-    const { time_trials } = user
-    // const { track_id, driver_id, Lap_Time, date } = time_trials
+    const {time_trials} = user
+    // const {track_id, driver_id, Lap_Time, date} = time_trials
+
+export default function UserTimes () {
 
     return (
         <div>
-            {Driver.time_trials}
-            {/* {time_trials.date} */}
+            
         </div>
     )
 }
