@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 
 export default function Login () {
@@ -14,16 +14,24 @@ export default function Login () {
     // const handleIfUser = () => {
     //     setIfUser(ifUser => !ifUser)
     // }
-    const [currentDriver, setCurrentDriver] = useState(null)
 
     const [formData, setFormData] = useState('')
     const [errors, setErrors] = useState([])
     // const history = useHistory()
 
+    useEffect(() => {
+        const currentDriver = sessionStorage.getItem("user_id")
+        if (currentDriver) {
+            navigate("/")
+        }
+    }, [])
+
     const {username, password} = formData
 
+
+
     function handleLogin(driver) {
-        setCurrentDriver(driver);
+        sessionStorage.setItem("user_id", driver.id);
         }
 
     function onSubmit(e){
@@ -40,7 +48,7 @@ export default function Login () {
         })
         .then(res => {
             if(res.ok){
-                res.json().then(currentDriver => handleLogin(currentDriver))
+                res.json().then(currentDriver => handleLogin(currentDriver)).then(() => {navigate("/")})
             }else {
                 res.json().then(json => setErrors(json.errors))
             }
