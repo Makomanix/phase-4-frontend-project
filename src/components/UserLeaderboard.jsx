@@ -23,7 +23,7 @@ export default function UserLeaderboard ({API}) {
     // },[]);
 
     useEffect(() => {
-        fetch(`${API}/drivers`)
+        fetch(`/drivers`)
         .then((res) => res.json())
         .then((drivers) => setDrivers(drivers));
     },[])
