@@ -3,7 +3,7 @@ import RecentTimes from "./RecentTimes"
 
 // const API = "http://localhost:3000"
 
-export default function UserLeaderboard ({API}) {
+export default function UserLeaderboard () {
     const [time_trials, setTime_Trials] = useState([])
     // const [tracks, setTracks] = useState([])
     // const [combinedData, setCombinedData] = useState([])
