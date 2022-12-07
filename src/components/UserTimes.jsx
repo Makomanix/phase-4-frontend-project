@@ -5,8 +5,6 @@ export default function UserTimes ({user}) {
     const {time_trials} = user
     // const {track_id, driver_id, Lap_Time, date} = time_trials
 
-export default function UserTimes () {
-
     return (
         <div>
             
