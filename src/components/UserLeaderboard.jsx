@@ -31,18 +31,18 @@ export default function UserLeaderboard() {
 
     // const recentDrivers = drivers.sort().slice(0,10)
 
-    const recentTimesCard = time_trials.slice(0,10).map((time_trial) => {
+    const recentTimesCard = time_trials.slice(0,10).map((time_trial) => 
         <RecentTimes
         key={time_trial.id}
         id={time_trial.id}
         time_trial={time_trial}
         />
-    })
+    )
 
     //make dropdown to select track then have component filter times by order from lowest to highest
 
     return (
-    <div>
+        <div className="absolute top-1/2 left-1/2">
         <button></button>
         {recentTimesCard}
         {/* {display ? <TopTimes tracks={tracks}/> : <RecentTimes drivers={drivers}/> } */}

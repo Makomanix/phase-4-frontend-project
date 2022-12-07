@@ -63,7 +63,7 @@ export default function Login () {
                 <label>Password:</label>
                 <input type='password' name='password' value={password} onChange={handleChange}/>
                 <button  value='Log in!'>Log In!</button>
-                <button>SIGNUP</button>
+                <button>Signup</button>
             </form>
             {errors? <div>{errors}</div>:null}
         </div>
