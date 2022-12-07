@@ -19,7 +19,6 @@ export default function TimeTrialsContainer() {
         ifUser ? 
         <UserContainer 
         onUserCreate={handleIfUser} 
-        user={ifUser}
         /> : navigate("/login") 
         }
         </div>

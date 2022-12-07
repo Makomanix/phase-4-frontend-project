@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react";
-import RecentTimes from "./RecentTimes"
+import RecentTimes from "./RecentTimes";
 
 // const API = "http://localhost:3000"
 
-export default function UserLeaderboard () {
+export default function UserLeaderboard() {
     const [time_trials, setTime_Trials] = useState([])
     // const [tracks, setTracks] = useState([])
     // const [combinedData, setCombinedData] = useState([])
@@ -31,13 +31,13 @@ export default function UserLeaderboard () {
 
     // const recentDrivers = drivers.sort().slice(0,10)
 
-    const recentTimesCard = time_trials.slice(0,10).map((time_trial) => {
+    const recentTimesCard = time_trials.slice(0,10).map((time_trial) => 
         <RecentTimes
         key={time_trial.id}
         id={time_trial.id}
         time_trial={time_trial}
         />
-    })
+    )
 
     //make dropdown to select track then have component filter times by order from lowest to highest
 

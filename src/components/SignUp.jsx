@@ -20,7 +20,7 @@ export default function SignUp () {
         fetch(`/drivers`)
         .then((res) => res.json())
         .then((drivers) => setDrivers(drivers));
-    },[drivers])
+    },[])
     
     const addDriver = (newDriver) => {
         setDrivers(drivers => [...drivers,newDriver])
@@ -53,15 +53,17 @@ export default function SignUp () {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-            <input 
-            placeholder="signup or something" 
-            name="user_name" 
-            value={formData.user_name} 
-            onChange={handleChange}
-            />
-            </form>
-            <UserContainer drivers={drivers}/>
+            <div>
+                <form onSubmit={handleSubmit}>
+                <input 
+                placeholder="signup or something" 
+                name="user_name" 
+                value={formData.user_name} 
+                onChange={handleChange}
+                />
+                </form>
+                <UserContainer drivers={drivers}/>
+            </div>
         </div>
     )
 }
