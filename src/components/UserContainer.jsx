@@ -22,8 +22,6 @@ export default function UserContainer ({API, onUserCreate, user}) {
             <h1 className="text-center font-bold pt-2">Welcome Drive #1</h1>
             <div>
                 <button onClick={onUserCreate}></button>
-                <TracksContainer/>
-                <DriversContainer/>
                 <UserProfile user={user}/>
                 <UserTimes user={user}/>
                 <UserLeaderboard user={user} API={API}/>
