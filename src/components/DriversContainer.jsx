@@ -22,8 +22,6 @@ export default function DriversContainer () {
 
     return (
         <div>
-            <button className="absolute top-4 left-[12%] h-8 w-20 z-40 ">Tracks</button>
-            <button className="absolute top-4 left-[20%] h-8 w-20 z-40 ">Profile</button>
         <div>
                 <DriverDetails driver={selectedDriver}/>
                 <DriverCollection drivers={drivers} onClickDriver={handleSelectDriver}/>
