@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from "react";
-import {useNavigate} from "react-router-dom";
-import UserContainer from "./UserContainer";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const emptyForm = {
     name: "",
@@ -11,11 +10,11 @@ const emptyForm = {
     car: ""
 }
 
-export default function SignUp ({drivers, setDrivers}) {
-    const [formData, setFormData] = useState(emptyForm)
+export default function SignUp ({ drivers, setDrivers }) {
+    const [ formData, setFormData ] = useState(emptyForm);
     const navigate = useNavigate();
     
-    function addDriver(newDriver) {
+    const addDriver = (newDriver) => {
         setDrivers([...drivers,newDriver])
     }
     
@@ -26,7 +25,6 @@ export default function SignUp ({drivers, setDrivers}) {
         })
     }
         
-    
     const handleSubmit = (e) => {
         e.preventDefault();
         fetch(`/drivers`, {
@@ -36,13 +34,12 @@ export default function SignUp ({drivers, setDrivers}) {
             },
             body: JSON.stringify({...formData})
         })
-        .then((r) => r.json())
+        .then((res) => res.json())
         .then((newDriver) => {
             addDriver(newDriver)
         })
         .then(navigate("/")) 
     }
-
 
     return (
         <div>
@@ -64,6 +61,6 @@ export default function SignUp ({drivers, setDrivers}) {
             <button className="absolute bottom-1 left-[42%]">Sign Up!</button>
             </div>
         </div>
-    )
+    );
 }
 

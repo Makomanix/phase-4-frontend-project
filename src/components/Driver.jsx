@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Driver ({id, driver, onClickDriver}) {
-    const {name, age, country, user_name, bio, car} = driver;
+export default function Driver ({ driver, onClickDriver }) {
+    const { name, age, country, user_name, bio, car } = driver;
     
     const handleClick = () => {
         onClickDriver(driver);
@@ -19,5 +19,5 @@ export default function Driver ({id, driver, onClickDriver}) {
             </div>
             <button className='text-center font-semibold mx-4'onClick={handleClick}>Details</button>
         </div>
-    )
+    );
 }

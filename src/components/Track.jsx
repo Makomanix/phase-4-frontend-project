@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Track ({id, track, onClickTrack}) {
+export default function Track ({ track, onClickTrack }) {
     const { name, location, length, year_of_construction, history } = track;
     
     const handleClick = () => {
@@ -18,5 +18,5 @@ export default function Track ({id, track, onClickTrack}) {
             </div>
             <button className='text-center font-semibold mx-4' onClick={handleClick}>Details</button>
         </div>
-    )
+    );
 }

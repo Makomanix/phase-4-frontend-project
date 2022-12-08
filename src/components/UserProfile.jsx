@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function UserProfile ({user}) {
-    const {name, age, country, bio, car} = user
+export default function UserProfile ({ user }) {
+    const { name, age, country, bio, car } = user;
 
     return (
         <div className='absolute top-[15%] left-[3%] '>
@@ -14,5 +14,5 @@ export default function UserProfile ({user}) {
                 <div className="bg-slate-400 text-center pl-2 rounded-lg my-1 truncate outline">Bio: {bio}The greatest driver in all history of racing </div>
             </div>
         </div>
-    )
+    );
 }

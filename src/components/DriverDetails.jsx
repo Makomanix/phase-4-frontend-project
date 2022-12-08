@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function DriverDetails ({driver}) {
+export default function DriverDetails ({ driver }) {
     if(!driver) return null;
     
-    const {name, age, country, user_name, bio, car} = driver;
+    const { name, age, country, user_name, bio, car } = driver;
 
     return (
         <div className="grid h-screen place-items-center">
@@ -16,5 +16,5 @@ export default function DriverDetails ({driver}) {
                 <div className='text-center font-bold'>{bio}</div> 
             </div>
         </div>
-    )
+    );
 }
