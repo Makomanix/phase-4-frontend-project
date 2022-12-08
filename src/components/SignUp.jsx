@@ -56,9 +56,9 @@ export default function SignUp ({ drivers, setDrivers }) {
                         <input className='text-center rounded-md' name="username" placeholder="username" type="text" onChange={handleChange}></input>
                         <label className="text-center font-bold">Password: </label>
                         <input className='text-center rounded-md' name="password" placeholder="password" type="text" onChange={handleChange}></input>
+                        <button className="absolute bottom-1 left-[42%]">Sign Up!</button>
                     </form>
                 </div>
-            <button className="absolute bottom-1 left-[42%]">Sign Up!</button>
             </div>
         </div>
     );

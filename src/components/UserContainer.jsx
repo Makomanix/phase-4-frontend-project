@@ -13,22 +13,22 @@ export default function UserContainer ({ onUserCreate }) {
         const currentDriver = sessionStorage.getItem("user_id")
         if (currentDriver == null){
             navigate("/login")
-        }else {
+        }else{
             fetch(`/drivers/${currentDriver}`)
             .then((res) => res.json())
             .then((user) => setUser(user))
         }
     },[time_trials]);
 
+    const updateTimes = (newTime) => {
+        setTime_Trials([newTime, ...time_trials])
+    }
+
     useEffect(() => {
         fetch(`/time_trials`)
         .then((res) => res.json())
         .then((time_trials) => setTime_Trials(time_trials));
-    },[setTime_Trials]);
-
-    const updateTimes = (newTime) => {
-        setTime_Trials([...time_trials, newTime])
-    }
+    },[updateTimes]);
 
     return (
         <div>

@@ -5,7 +5,7 @@ export default function UserProfile ({ user }) {
 
     return (
         <div className='absolute top-[15%] left-[3%] '>
-            <div class="bg-slate-200 grid overflow-hidden xl grid-cols-1 grid-rows-5 px-2 outline rounded-lg">
+            <div className="bg-slate-200 grid overflow-hidden xl grid-cols-1 grid-rows-5 px-2 outline rounded-lg">
             <h1 className="text-center font-bold underline">Profile</h1>
                 <div className="bg-slate-400 text-center pl-2 rounded-lg my-1 outline">Name: {name}</div>
                 <div className="bg-slate-400 text-center pl-2 rounded-lg my-1 outline">Age: {age}</div>
