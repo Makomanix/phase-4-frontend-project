@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Routes, Route} from 'react-router-dom'
 import UserContainer from './components/UserContainer';
 import Login from './components/Login';
@@ -10,12 +10,20 @@ import NavBar from './components/NavBar';
 
 
 function App() {
+  const [drivers, setDrivers] = useState([])
+
+  useEffect(() => {
+    fetch(`/drivers`)
+    .then((res) => res.json())
+    .then((drivers) => setDrivers(drivers));
+}, [setDrivers])
+
   return (
     <div className="bg-slate-200">
-      <NavBar/>
+      <NavBar />
       <Routes>
-        <Route path='/' element={<UserContainer />} />
-        <Route path='/login' element={<Login />} />
+        <Route path='/' element={<UserContainer drivers={drivers}/>} />
+        <Route path='/login' element={<Login drivers={drivers} setDrivers={setDrivers}/>} />
         <Route path='/sign_up' element={<SignUp />} />
         <Route path='/drivers' element={<DriversContainer />} />
         <Route path='/tracks' element={<TracksContainer />} />
