@@ -28,10 +28,14 @@ export default function UserContainer ({ onUserCreate }) {
     return (
         <div>
             <div>
+                <button>What is this</button>
+                <button>Its a button</button>
+                <div>
                 <button onClick={onUserCreate}></button>
                 <UserProfile user={user}/>
                 <UserTimes user={user}/>
                 <UserLeaderboard user={user}/>
+                </div>
             </div>
         </div>
     )
