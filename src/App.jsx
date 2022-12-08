@@ -28,17 +28,3 @@ function App() {
 
 export default App;
 
-{/* <div className="px-2 flex justify-between items-center w-full h-full">
-  <div className="flex items-center">
-    <h1 className='text-4xl font-bold pl-8 mr-4'>Track Days</h1>
-    <ul className="flex">
-      <li>Tracks</li>
-      <li>Drivers</li>
-    </ul>
-  </div>
-  <div className='flex pr-4'>
-    <button className='border-none bg-transparent mr-4'>Sign In</button>
-    <button>Sign up</button>
-
-  </div>
-</div> */}
