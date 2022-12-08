@@ -1,16 +1,14 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import RecentTimes from "./RecentTimes";
-
-// const API = "http://localhost:3000"
 
 export default function UserLeaderboard({time_trials}) {
     
     const recentTimesCard = time_trials.slice(0,10).map((time_trial) => 
-        <RecentTimes
+      <RecentTimes
         key={time_trial.id}
         id={time_trial.id}
         time_trial={time_trial}
-        />
+      />
     )
 
     return (
