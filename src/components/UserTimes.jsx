@@ -58,6 +58,23 @@ export default function UserTimes ({user, updateTimes}) {
             <h1 className="text-center font-bold underline">My Time Trials</h1>
             <div className="grid grid-cols-1 grid-rows-auto overflow-hidden py-1 gap-y-2">
             {timeTrialCards}
+            <form onSubmit={handleSubmit}>
+                {/* <label>name</label>
+                <input name="driver_id" type="text"></input> */}
+                <label>Date</label> 
+                <input name="date" placeholder="YYYY-MM-DD" type="text" onChange={handleChange}></input>
+                <label>Track</label>
+                <select name="track_id" onChange={handleInput2}>
+                    <option>Select Track</option>
+                    <option value="1">Rainbow Road</option>
+                    <option value="2">Koopa Troopa Beach</option>
+                    <option value="3">DK Summit</option>
+                </select>
+                <label>Lap Time</label>
+                <input name="Lap_Time" placeholder="time here" type="text" onChange={handleChange}></input>
+                <button >Add Time</button>
+            </form>
+            </div>
         </div>
     )
 }

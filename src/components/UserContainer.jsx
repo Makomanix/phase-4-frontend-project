@@ -44,10 +44,6 @@ export default function UserContainer ({ onUserCreate }) {
                 <UserProfile user={user}/>
                 <UserTimes user={user} updateTimes={updateTimes}/>
                 <UserLeaderboard user={user} time_trials={time_trials}/>
-            </div>
-        </div>
-                <UserTimes user={user}/>
-                <UserLeaderboard user={user}/>
                 </div>
             </div>
         </div>
