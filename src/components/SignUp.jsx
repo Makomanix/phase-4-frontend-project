@@ -7,7 +7,8 @@ const emptyForm = {
     country: "",
     user_name: "",
     bio: "",
-    car: ""
+    car: "",
+    admin: false
 }
 
 export default function SignUp ({ drivers, setDrivers }) {

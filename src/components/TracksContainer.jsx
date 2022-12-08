@@ -5,10 +5,13 @@ import TrackForm from "./TrackForm";
 import { useNavigate } from "react-router-dom"
 
 export default function TracksContainer () {
+    const [ userAdmin, setUserAdmin ] = useState([])
     const [ tracks, setTracks ] = useState([]);
     const [ selectedTrackId, setSelectedTrackId ] = useState(null);
     const [searchQuery, setSearchQuery] = useState("");
     const navigate = useNavigate();
+
+    const {admin, id} = userAdmin
 
     useEffect(() => {
       const currentDriver = sessionStorage.getItem("user_id")
@@ -20,6 +23,17 @@ export default function TracksContainer () {
         .then((tracks) => setTracks(tracks));
       }
     },[setTracks]);
+
+    useEffect(() => {
+      const currentDriver = sessionStorage.getItem("user_id")
+      if (currentDriver == null){
+          navigate("/login")
+      }else{
+          fetch(`/drivers/${currentDriver}`)
+          .then((res) => res.json())
+          .then((user) => setUserAdmin(user))
+      }
+  },[]);
 
     const addTrack = (newTrack) => {
         setTracks(tracks => [...tracks,newTrack])
@@ -34,14 +48,21 @@ export default function TracksContainer () {
     const tracksToDisplay = tracks.filter((track) => 
           track.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    
+
+    const removeTrack = (id) => {
+      const newTracks = tracks.filter((track) => track.id !== id)
+        setTracks(newTracks)
+    }
+
     return ( 
     <div>
         <div>
-          <TrackDetails track={selectedTrack} />
+          <TrackDetails track={selectedTrack} admin={admin} id={id} removeTrack={removeTrack}/>
         </div>
         <div>
-          <TrackForm addTrack={addTrack}/>
+          {admin ? <TrackForm addTrack={addTrack}/> : <></>}
+          {/* <TrackForm addTrack={addTrack}/> */}
+          {/* {admin} */}
         </div>
         <div>
           <TracksCollection 

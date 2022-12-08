@@ -1,9 +1,20 @@
 import React from "react";
 
-export default function TrackDetails ({ track }) {
+export default function TrackDetails ({ track, admin, removeTrack, id }) {
     if (!track) return null;
 
     const { name, location, length, year_of_construction, history } = track;
+
+    const handleDelete = (e) => {
+        fetch(`/tracks/${id}`, {
+            method: 'DELETE',
+        }).then((res) => {
+            if (res.ok) {
+                removeTrack(id)
+            }
+        })
+        
+    }
 
     return (
         <div className = "grid h-screen place-items-center">
@@ -13,6 +24,7 @@ export default function TrackDetails ({ track }) {
                 <div className='text-center font-bold'>{length}</div>
                 <div className='text-center font-bold'>{year_of_construction}</div>
                 <div className='text-center font-bold'>{history}</div>
+                {admin ? <button onClick={handleDelete}>Delete!</button> : <></>}
             </div>
         </div>
     );

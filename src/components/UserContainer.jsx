@@ -28,7 +28,7 @@ export default function UserContainer ({ onUserCreate }) {
         fetch(`/time_trials`)
         .then((res) => res.json())
         .then((time_trials) => setTime_Trials(time_trials));
-    },[updateTimes]);
+    },[]);
 
     return (
         <div>
