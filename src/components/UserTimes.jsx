@@ -9,6 +9,7 @@ export default function UserTimes ({user}) {
 
     return (
         <div className="bg-slate-200 absolute bottom-11 left-8 mr-20 h-[35%] w-[30%] rounded-md border-8 outline">
+            <h1 className="text-center font-bold">My Time Trials</h1>
             <div className="grid grid-cols-1 grid-rows-auto overflow-hidden py-1 gap-y-2">
             {timeTrialCards}
             </div>
