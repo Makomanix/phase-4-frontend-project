@@ -1,18 +1,9 @@
 import React, { useState } from "react";
-import TimeTrial from "./TimeTrial";
 
-export default function UserTimes ({ user, updateTimes }) {
+export default function UserTimesForm ({ user, updateTimes }) {
     const [ formData, setFormData ] = useState("");
-    const { time_trials, id } = user;
+    const { id } = user;
     
-    const timeTrialCards = time_trials?.map((time_trial) => 
-        <TimeTrial 
-            key={time_trial.id} 
-            id={time_trial.id} 
-            time_trial={time_trial}
-        />
-    );
-
     const handleSubmit = (e) => {
         e.preventDefault();
         const newTime = {
@@ -51,8 +42,7 @@ export default function UserTimes ({ user, updateTimes }) {
         <div className="bg-slate-200 absolute bottom-[5%] left-[3%] mr-20 h-[48%] w-[30%] rounded-md border-8 outline">
             <h1 className="text-center font-bold underline">My Time Trials</h1>
             <div className="grid grid-cols-1 grid-rows-auto overflow-hidden py-1 gap-y-2">
-            {timeTrialCards}
-            <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
                 {/* <label>name</label>
                 <input name="driver_id" type="text"></input> */}
                 <label>Date</label> 
@@ -67,7 +57,7 @@ export default function UserTimes ({ user, updateTimes }) {
                 <label>Lap Time</label>
                 <input name="Lap_Time" placeholder="time here" type="text" onChange={handleChange}></input>
                 <button >Add Time</button>
-            </form>
+                </form>
             </div>
         </div>
     );

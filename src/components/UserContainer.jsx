@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import UserProfile from "./UserProfile"
 import UserLeaderboard from "./UserLeaderboard"
-import UserTimes from "./UserTimes"
 import { useNavigate } from "react-router-dom"
+import UserTimesCollection from "./UserTimesCollection";
+import UserTimesForm from "./UserTimesForm";
 
 export default function UserContainer ({ onUserCreate }) {
     const [ user, setUser ] = useState([]);
     const [ time_trials, setTime_Trials ] = useState([]);
+    const [ isUserTime, setIsUserTime ] = useState(false)
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -30,14 +32,27 @@ export default function UserContainer ({ onUserCreate }) {
         .then((time_trials) => setTime_Trials(time_trials));
     },[]);
 
+    const handleIfUserClick = () => {
+        setIsUserTime(isUserTime => !isUserTime)
+    }
+
     return (
         <div>
             <div>
                 <div>
                 <button onClick={onUserCreate}></button>
                 <UserProfile user={user}/>
-                <UserTimes user={user} updateTimes={updateTimes}/>
-                <UserLeaderboard user={user} time_trials={time_trials}/>
+                <UserTimesForm user ={user} updateTimes={updateTimes}/>
+                <button className="absolute top-1/3 left-1/3 z-40" onClick={handleIfUserClick}>{isUserTime ? "Recently Posted Times" : "Your Times"}</button>
+                {isUserTime ? 
+                <UserLeaderboard 
+                    user={user} 
+                    time_trials={time_trials}
+                /> : 
+                <UserTimesCollection 
+                    user={user}
+                />
+                }
                 </div>
             </div>
         </div>
