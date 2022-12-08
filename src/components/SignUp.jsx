@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
-import UserContainer from "./UserContainer";
 
 const emptyForm = {
     name: "",
@@ -36,13 +35,12 @@ export default function SignUp ({drivers, setDrivers}) {
             },
             body: JSON.stringify({...formData})
         })
-        .then((r) => r.json())
+        .then((res) => res.json())
         .then((newDriver) => {
             addDriver(newDriver)
         })
         .then(navigate("/")) 
     }
-
 
     return (
         <div>
@@ -70,15 +68,7 @@ export default function SignUp ({drivers, setDrivers}) {
                     </div>
                     <button>Sign Up!</button>
                 </form>
-                {/* <UserContainer drivers={drivers}/> */}
             </div>
         </div>
     )
 }
-
-{/* <input 
-placeholder="signup or something" 
-name="user_name" 
-value={formData.user_name} 
-onChange={handleChange}
-/> */}

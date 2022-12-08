@@ -13,17 +13,13 @@ export default function TimeTrialsContainer() {
      }
     return (
     <div>
-        {/* might need to add signup and login component as a ternary here instead of user */}
-        {/* Signedup ? <SignUp /> : <Login /> */}
         <div>{ 
         ifUser ? 
         <UserContainer 
-        
         onUserCreate={handleIfUser} 
         /> : navigate("/login") 
         }
         </div>
-        {/* <button onClick={handleIfUser}>Something with User or w.e</button> */}
         <TracksContainer />
         <DriversContainer />
     </div>

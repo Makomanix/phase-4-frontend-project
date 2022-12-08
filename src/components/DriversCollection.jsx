@@ -3,8 +3,7 @@ import Driver from "./Driver"
 
 export default function DriversCollection ({drivers, onClickDriver}) {
 
-    const driverCards = drivers.map((driver) => 
-      
+    const driverCards = drivers.map((driver) =>      
       <Driver 
       key={driver.id}
       id={driver.id}

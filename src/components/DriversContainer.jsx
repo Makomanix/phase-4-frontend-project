@@ -7,7 +7,6 @@ export default function DriversContainer () {
     const [ drivers, setDrivers ] = useState([])
     const [ selectedDriverId, setSelectedDriverId ] = useState(null)
 
-
     useEffect(() => {
         fetch(`/drivers`)
         .then((res) => res.json())
@@ -22,10 +21,10 @@ export default function DriversContainer () {
 
     return (
         <div>
-        <div>
+            <div>
                 <DriverDetails driver={selectedDriver}/>
                 <DriverCollection drivers={drivers} onClickDriver={handleSelectDriver}/>
-        </div>
+            </div>
         </div>
     )
 }

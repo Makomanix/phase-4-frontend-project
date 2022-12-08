@@ -2,23 +2,10 @@ import React, {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import SignUp from "./SignUp"
 
-export default function Login ({drivers, setDrivers}) {
-    const navigate = useNavigate();
-
-      // const [showLogin, setShowLogin] = useState(true)
-    // const [ifUser, setIfUser] = useState(false)
-
-    // const handleShowLogin = () => {
-    //     setShowLogin(showLogin => !showLogin)
-    // }
-
-    // const handleIfUser = () => {
-    //     setIfUser(ifUser => !ifUser)
-    // }
-
+export default function Login () {
     const [formData, setFormData] = useState('')
     const [errors, setErrors] = useState([])
-    // const history = useHistory()
+    const navigate = useNavigate();
 
     useEffect(() => {
         const currentDriver = sessionStorage.getItem("user_id")
@@ -29,19 +16,16 @@ export default function Login ({drivers, setDrivers}) {
 
     const {username, password} = formData
 
-
-
-    function handleLogin(driver) {
+    const handleLogin = (driver) => {
         sessionStorage.setItem("user_id", driver.id);
-        }
+    }
 
-    function onSubmit(e){
+    const onSubmit = (e) => {
         e.preventDefault()
         const driver = {
             username,
             password
         }
-        // Logs in user
         fetch(`/login`,{
             method:'POST',
             headers:{'Content-Type': 'application/json'},
@@ -56,18 +40,16 @@ export default function Login ({drivers, setDrivers}) {
         })
         
     }
-    // {
-    //     history.push(`/users/${user.id}`)
-    // })
-
+    
     const handleChange = (e) => {
         const { name, value } = e.target
         setFormData({ ...formData, [name]: value })
-        }
+    }
 
-        function handleClick(){
-            navigate("/sign_up")
-        }
+    const handleClick = () => {
+        navigate("/sign_up")
+    }
+
     return (
         <div >
             <form className="flex flex-col justify-center items-center space-y-3 h-screen w-auto" onSubmit={onSubmit} >
