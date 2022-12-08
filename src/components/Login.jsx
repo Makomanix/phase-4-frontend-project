@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
+import SignUp from "./SignUp"
 
-export default function Login () {
+export default function Login ({drivers, setDrivers}) {
     const navigate = useNavigate();
 
       // const [showLogin, setShowLogin] = useState(true)
@@ -63,15 +64,19 @@ export default function Login () {
         const { name, value } = e.target
         setFormData({ ...formData, [name]: value })
         }
+
+        function handleClick(){
+            navigate("/sign_up")
+        }
     return (
         <div >
             <form className="flex flex-col justify-center items-center space-y-3 h-screen w-auto" onSubmit={onSubmit} >
                 <label className="border-spacing-2">Username:</label>
-                <input type='username' name='username'value={username} onChange={handleChange}/>
+                <input type='username' name='username' value={username} onChange={handleChange}/>
                 <label>Password:</label>
                 <input type='password' name='password' value={password} onChange={handleChange}/>
                 <button  value='Log in!'>Log In!</button>
-                <button>SIGNUP</button>
+                <button onClick={handleClick}>SIGNUP</button>
             </form>
             {errors? <div>{errors}</div>:null}
         </div>

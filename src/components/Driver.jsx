@@ -17,7 +17,7 @@ export default function Driver ({id, driver, onClickDriver}) {
                 {bio}
                 {car}
             </div>
-        <button className='text-center font-semibold mx-4'onClick={handleClick}>Details</button>
-    </div>
+            <button className='text-center font-semibold mx-4'onClick={handleClick}>Details</button>
+        </div>
     )
 }

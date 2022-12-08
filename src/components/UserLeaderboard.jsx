@@ -3,8 +3,8 @@ import RecentTimes from "./RecentTimes";
 
 // const API = "http://localhost:3000"
 
-export default function UserLeaderboard() {
-    const [time_trials, setTime_Trials] = useState([])
+export default function UserLeaderboard({time_trials}) {
+    // const [time_trials, setTime_Trials] = useState([])
     // const [tracks, setTracks] = useState([])
     // const [combinedData, setCombinedData] = useState([])
 
@@ -23,11 +23,11 @@ export default function UserLeaderboard() {
     //     });
     // },[]);
 
-    useEffect(() => {
-        fetch(`/time_trials`)
-        .then((res) => res.json())
-        .then((time_trials) => setTime_Trials(time_trials));
-    },[])
+    // useEffect(() => {
+    //     fetch(`/time_trials`)
+    //     .then((res) => res.json())
+    //     .then((time_trials) => setTime_Trials(time_trials));
+    // },[])
 
     // const recentDrivers = drivers.sort().slice(0,10)
 
@@ -42,10 +42,11 @@ export default function UserLeaderboard() {
     //make dropdown to select track then have component filter times by order from lowest to highest
 
     return (
-    <div>
-        <button></button>
-        {recentTimesCard}
-        {/* {display ? <TopTimes tracks={tracks}/> : <RecentTimes drivers={drivers}/> } */}
-    </div>
+        <div className="bg-slate-200 absolute inset-x-0 bottom-8 left-80 mr-12 ml-20 h-auto rounded-md border-8 outline">
+            <h1 className="text-center font-bold underline">Recent Time Trials</h1>
+            <div className="grid grid-cols-1 grid-rows-auto overflow-hidden py-1 gap-y-2">
+            {recentTimesCard}            
+            </div>
+        </div>
     )
 }
