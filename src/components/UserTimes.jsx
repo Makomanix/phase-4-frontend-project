@@ -54,7 +54,7 @@ export default function UserTimes ({user, updateTimes}) {
     }
 
     return (
-        <div className="bg-slate-200 absolute bottom-8 left-8 mr-20 h-[36%] w-[30%] rounded-md border-8 outline">
+        <div className="bg-slate-200 absolute bottom-[5%] left-[3%] mr-20 h-[48%] w-[30%] rounded-md border-8 outline">
             <h1 className="text-center font-bold underline">My Time Trials</h1>
             <div className="grid grid-cols-1 grid-rows-auto overflow-hidden py-1 gap-y-2">
             {timeTrialCards}

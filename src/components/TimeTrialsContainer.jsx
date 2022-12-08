@@ -15,12 +15,12 @@ export default function TimeTrialsContainer() {
         setIfUser(ifUser => !ifUser)
      }
     return (
-    <div>
+        <div >
         {/* might need to add signup and login component as a ternary here instead of user */}
         {/* Signedup ? <SignUp /> : <Login /> */}
         <div>{ 
         ifUser ? 
-        <UserContainer 
+            <UserContainer 
         
         onUserCreate={handleIfUser} 
         user={ifUser}

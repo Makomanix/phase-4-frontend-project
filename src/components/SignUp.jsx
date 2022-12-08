@@ -46,39 +46,24 @@ export default function SignUp ({drivers, setDrivers}) {
 
     return (
         <div>
-            <div>
-                <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center space-y-3 h-screen w-auto">
-                    <div>
-                        <label>Name (first & last): </label>
-                        <input name="name" placeholder="name here" type="text" onChange={handleChange}/>
-                    </div>
-                    <div>
-                        <label>age: </label>
-                        <input name="age" placeholder="age here" type="text" onChange={handleChange}></input>
-                    </div>
-                    <div>
-                        <label>country: </label>
-                        <input name="country" placeholder="country" type="text" onChange={handleChange}></input>
-                    </div>
-                    <div>
-                        <label>username: </label>
-                        <input name="username" placeholder="username" type="text" onChange={handleChange}></input>
-                    </div>
-                    <div>
-                        <label>password: </label>
-                        <input name="password" placeholder="password" type="text" onChange={handleChange}></input>
-                    </div>
-                    <button>Sign Up!</button>
-                </form>
-                {/* <UserContainer drivers={drivers}/> */}
+            <div className="bg-slate-200 xl:left-[35%] absolute top-[30%] left-[30%] outline rounded-lg" >
+                <div>
+                    <form onSubmit={handleSubmit} className="grid overflow-hidden xl grid-cols-2 grid-rows-6 gap-px gap-x-1 gap-y-2 mx-4 p-2">
+                        <label className='text-center font-bold'>Name: </label> 
+                        <input className='text-center rounded-md' name="name" placeholder="your name" type="text" onChange={handleChange}/>
+                        <label className="text-center font-bold">Age: </label>
+                        <input className='text-center rounded-md' name="age" placeholder="age" type="text" onChange={handleChange}></input>
+                        <label className="text-center font-bold">Country: </label>
+                        <input className='text-center rounded-md' name="country" placeholder="country" type="text" onChange={handleChange}></input>
+                        <label className="text-center font-bold">Username: </label>
+                        <input className='text-center rounded-md' name="username" placeholder="username" type="text" onChange={handleChange}></input>
+                        <label className="text-center font-bold">Password: </label>
+                        <input className='text-center rounded-md' name="password" placeholder="password" type="text" onChange={handleChange}></input>
+                    </form>
+                </div>
+            <button className="absolute bottom-1 left-[42%]">Sign Up!</button>
             </div>
         </div>
     )
 }
 
-{/* <input 
-placeholder="signup or something" 
-name="user_name" 
-value={formData.user_name} 
-onChange={handleChange}
-/> */}

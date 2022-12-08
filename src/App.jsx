@@ -19,9 +19,9 @@ function App() {
 }, [setDrivers])
 
   return (
-    <div className="bg-slate-200">
+    <div >
       <NavBar />
-      <Routes>
+      <Routes >
         <Route path='/' element={<UserContainer drivers={drivers}/>} />
         <Route path='/login' element={<Login drivers={drivers} setDrivers={setDrivers}/>} />
         <Route path='/sign_up' element={<SignUp />} />

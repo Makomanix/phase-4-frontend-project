@@ -2,10 +2,7 @@ import React, {useState, useEffect} from "react";
 import UserProfile from "./UserProfile"
 import UserLeaderboard from "./UserLeaderboard"
 import UserTimes from "./UserTimes"
-import TracksContainer from "./TracksContainer";
-import DriversContainer from "./DriversContainer";
-import NavBar from "./NavBar";
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 
 export default function UserContainer ({ onUserCreate }) {
@@ -13,7 +10,7 @@ export default function UserContainer ({ onUserCreate }) {
     const [user, setUser] = useState([])
     const [time_trials, setTime_Trials] = useState([])
 
-    const { id } = useParams()
+
 
     useEffect(() => {
         const currentDriver = sessionStorage.getItem("user_id")
