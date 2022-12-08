@@ -16,5 +16,5 @@ export default function DriverDetails ({ driver }) {
                 <div className='text-center font-bold'>{bio}</div> 
             </div>
         </div>
-    )
+    );
 }

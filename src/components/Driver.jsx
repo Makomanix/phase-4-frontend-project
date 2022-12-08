@@ -19,5 +19,5 @@ export default function Driver ({ driver, onClickDriver }) {
             </div>
             <button className='text-center font-semibold mx-4'onClick={handleClick}>Details</button>
         </div>
-    )
+    );
 }

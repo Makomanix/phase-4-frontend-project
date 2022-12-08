@@ -15,5 +15,5 @@ export default function TrackDetails ({ track }) {
                 <div className='text-center font-bold'>{history}</div>
             </div>
         </div>
-    )
+    );
 }

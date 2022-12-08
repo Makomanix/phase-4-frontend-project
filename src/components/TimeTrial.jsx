@@ -9,5 +9,5 @@ export default function TimeTrial({ time_trial }) {
         {Lap_Time}
         {track_id}
     </div>
-  )
+  );
 }

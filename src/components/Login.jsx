@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Login () {
-    const [ formData, setFormData ] = useState('')
-    const [ errors, setErrors ] = useState([])
+    const [ formData, setFormData ] = useState('');
+    const [ errors, setErrors ] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -11,9 +11,9 @@ export default function Login () {
         if (currentDriver) {
             navigate("/")
         }
-    }, [])
+    }, []);
 
-    const { username, password } = formData
+    const { username, password } = formData;
 
     const handleLogin = (driver) => {
         sessionStorage.setItem("user_id", driver.id);
@@ -36,8 +36,7 @@ export default function Login () {
             }else {
                 res.json().then(json => setErrors(json.errors))
             }
-        })
-        
+        })    
     }
     
     const handleChange = (e) => {
@@ -61,5 +60,5 @@ export default function Login () {
             </form>
             {errors? <div>{errors}</div>:null}
         </div>
-    )
+    );
 }

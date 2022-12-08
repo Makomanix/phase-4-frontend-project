@@ -69,5 +69,5 @@ export default function SignUp ({ drivers, setDrivers }) {
                 </form>
             </div>
         </div>
-    )
+    );
 }

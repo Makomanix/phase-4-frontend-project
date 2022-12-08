@@ -10,5 +10,5 @@ export default function RecentTimes ({ time_trial }) {
             <div className='text-center pl-8 truncate pt-1'>{driver_id}</div>
             <div className='text-center pr-4 pt-1'>{Lap_Time}.78</div>
     </div>
-    )
+    );
 }

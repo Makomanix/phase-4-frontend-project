@@ -14,5 +14,5 @@ export default function UserProfile ({ user }) {
                 <div className="bg-slate-400 text-center pl-2 rounded-lg my-1 truncate outline">Bio: {bio}The greatest driver in all history of racing </div>
             </div>
         </div>
-    )
+    );
 }

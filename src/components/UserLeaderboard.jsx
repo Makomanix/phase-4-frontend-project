@@ -9,7 +9,7 @@ export default function UserLeaderboard({ time_trials }) {
         id={time_trial.id}
         time_trial={time_trial}
       />
-    )
+    );
 
     return (
         <div className="bg-slate-200 absolute inset-x-0 bottom-8 left-80 mr-12 ml-20 h-auto rounded-md border-8 outline">
@@ -18,5 +18,5 @@ export default function UserLeaderboard({ time_trials }) {
             {recentTimesCard}            
             </div>
         </div>
-    )
+    );
 }

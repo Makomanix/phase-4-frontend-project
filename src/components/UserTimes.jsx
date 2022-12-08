@@ -70,5 +70,5 @@ export default function UserTimes ({ user, updateTimes }) {
             </form>
             </div>
         </div>
-    )
+    );
 }
