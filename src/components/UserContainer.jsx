@@ -28,8 +28,8 @@ export default function UserContainer ({ onUserCreate }) {
     return (
         <div>
             <div>
-                <button>What is this</button>
-                <button>Its a button</button>
+                <button className="absolute top-3 left-[12%] h-10 w-20 z-40 outline">Tracks</button>
+                <button className="absolute top-3 left-[20%] h-10 w-20 z-40 outline">Drivers</button>
                 <div>
                 <button onClick={onUserCreate}></button>
                 <UserProfile user={user}/>
