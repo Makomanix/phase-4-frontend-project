@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="2AjmQ4g3Ko494eU14FOw" name="Page-1">
-        <mxGraphModel dx="884" dy="573" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="613" dy="147" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -23,7 +23,7 @@
                     <mxGeometry x="20" y="10" width="810" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="16" value="recent times" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="387.5" y="205" width="385" height="125" as="geometry"/>
+                    <mxGeometry x="387.5" y="205" width="132.5" height="45" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="" style="shape=link;html=1;" parent="1" edge="1">
                     <mxGeometry width="100" relative="1" as="geometry">
@@ -148,11 +148,11 @@
                 <mxCell id="62" value="back home button" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="90" y="1382.5" width="90" height="35" as="geometry"/>
                 </mxCell>
-                <mxCell id="63" value="Form" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="105" y="480" width="120" height="60" as="geometry"/>
+                <mxCell id="63" value="Form" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="480" width="220" height="220" as="geometry"/>
                 </mxCell>
-                <mxCell id="64" value="my times" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="105" y="610" width="120" height="60" as="geometry"/>
+                <mxCell id="64" value="my times" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="205" width="160" height="45" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
