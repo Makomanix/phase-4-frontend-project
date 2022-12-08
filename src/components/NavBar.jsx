@@ -34,11 +34,15 @@ export default function NavBar () {
             <div className=" w-screen h-[60px] z-10 bg-slate-400 fixed drop-shadow-lg">
                 <h1 className='font-bold text-center text-4xl mt-2'>Ready Set Kart</h1>
                 <div>
+                    <button>
                     <NavLink to="/">User Profile</NavLink>
-                    {/* <NavLink to="/login">login</NavLink>
-                    <NavLink to="/sign_up">sign up</NavLink> */}
+                    </button>
+                    <button>
                     <NavLink to="/drivers">drivers</NavLink>
+                    </button>
+                    <button>
                     <NavLink to="/tracks">tracks</NavLink>
+                    </button>
                     {/* <button onClick={handleShowLogin}>Don't have an account? click here</button> */}
                     {/* {showLogin ? <Login /> : <Signup />} */}
                     {/* {ifUser ? <UserContainer /> : null} */}
