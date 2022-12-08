@@ -27,7 +27,6 @@ export default function UserContainer ({ onUserCreate }) {
 
     return (
         <div>
-            <h1 className="text-center font-bold pt-2">Welcome Drive #1</h1>
             <div>
                 <button onClick={onUserCreate}></button>
                 <UserProfile user={user}/>

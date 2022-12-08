@@ -22,12 +22,8 @@ export default function DriversContainer () {
 
     return (
         <div>
-            <div>
                 <DriverDetails driver={selectedDriver}/>
-            </div>
-            <div>
                 <DriverCollection drivers={drivers} onClickDriver={handleSelectDriver}/>
-            </div>
         </div>
     )
 }

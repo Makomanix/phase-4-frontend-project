@@ -42,10 +42,10 @@ export default function UserLeaderboard() {
     //make dropdown to select track then have component filter times by order from lowest to highest
 
     return (
-    <div>
-        <button></button>
-        {recentTimesCard}
-        {/* {display ? <TopTimes tracks={tracks}/> : <RecentTimes drivers={drivers}/> } */}
-    </div>
+        <div className="bg-slate-200 absolute inset-x-0 bottom-0 left-80 mr-20 ml-20 h-auto rounded-md outline">
+            <div className="grid grid-cols-1 grid-rows-auto overflow-hidden py-1 gap-y-3">
+            {recentTimesCard}            
+            </div>
+        </div>
     )
 }

@@ -21,15 +21,15 @@ export default function TimeTrialsContainer() {
         <div>{ 
         ifUser ? 
         <UserContainer 
-        API={API} 
+        
         onUserCreate={handleIfUser} 
         user={ifUser}
         /> : navigate("/login") 
         }
         </div>
         {/* <button onClick={handleIfUser}>Something with User or w.e</button> */}
-        <TracksContainer API={API}/>
-        <DriversContainer API={API}/>
+        <TracksContainer />
+        <DriversContainer />
     </div>
     )
 }
