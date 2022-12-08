@@ -27,12 +27,15 @@ export default function UserContainer ({ onUserCreate }) {
 
     return (
         <div>
-            <h1 className="text-center font-bold pt-2">Welcome Drive #1</h1>
             <div>
+                <button className="absolute top-4 left-[12%] h-8 w-20 z-40 ">Tracks</button>
+                <button className="absolute top-4 left-[20%] h-8 w-20 z-40 ">Drivers</button>
+                <div>
                 <button onClick={onUserCreate}></button>
                 <UserProfile user={user}/>
                 <UserTimes user={user}/>
                 <UserLeaderboard user={user}/>
+                </div>
             </div>
         </div>
     )

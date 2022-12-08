@@ -22,12 +22,12 @@ export default function DriversContainer () {
 
     return (
         <div>
-            <div>
+            <button className="absolute top-4 left-[12%] h-8 w-20 z-40 ">Tracks</button>
+            <button className="absolute top-4 left-[20%] h-8 w-20 z-40 ">Profile</button>
+        <div>
                 <DriverDetails driver={selectedDriver}/>
-            </div>
-            <div>
                 <DriverCollection drivers={drivers} onClickDriver={handleSelectDriver}/>
-            </div>
+        </div>
         </div>
     )
 }

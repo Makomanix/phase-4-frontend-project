@@ -8,8 +8,11 @@ export default function UserTimes ({user}) {
     const timeTrialCards = time_trials?.map((time_trial) => <TimeTrial key={time_trial.id} id={time_trial.id} time_trial={time_trial}/>)
 
     return (
-        <div>
+        <div className="bg-slate-200 absolute bottom-8 left-8 mr-20 h-[36%] w-[30%] rounded-md border-8 outline">
+            <h1 className="text-center font-bold underline">My Time Trials</h1>
+            <div className="grid grid-cols-1 grid-rows-auto overflow-hidden py-1 gap-y-2">
             {timeTrialCards}
+            </div>
         </div>
     )
 }
