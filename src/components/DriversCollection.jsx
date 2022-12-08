@@ -5,10 +5,10 @@ export default function DriversCollection ({drivers, onClickDriver}) {
 
     const driverCards = drivers.map((driver) =>      
       <Driver 
-      key={driver.id}
-      id={driver.id}
-      driver={driver}
-      onClickDriver={onClickDriver}
+        key={driver.id}
+        id={driver.id}
+        driver={driver}
+        onClickDriver={onClickDriver}
       /> 
     )
 
