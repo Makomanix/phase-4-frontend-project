@@ -1,7 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import DriverCollection from "./DriversCollection"
 import DriverDetails from "./DriverDetails"
-
 
 export default function DriversContainer () {
     const [ drivers, setDrivers ] = useState([])

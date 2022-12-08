@@ -1,7 +1,7 @@
 import React from "react";
 import Track from "./Track";
 
-export default function TracksCollection ({tracks, onClickTrack}) {
+export default function TracksCollection ({ tracks, onClickTrack }) {
 
     const trackCards = tracks.map((track) => 
       <Track 
@@ -10,7 +10,7 @@ export default function TracksCollection ({tracks, onClickTrack}) {
         track={track}
         onClickTrack={onClickTrack}
       />
-    )
+    );
 
     return (
         <div className="absolute inset-x-0 bottom-36 h-12">

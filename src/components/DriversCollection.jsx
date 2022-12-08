@@ -1,7 +1,7 @@
 import React from "react";
 import Driver from "./Driver"
 
-export default function DriversCollection ({drivers, onClickDriver}) {
+export default function DriversCollection ({ drivers, onClickDriver }) {
 
     const driverCards = drivers.map((driver) =>      
       <Driver 
@@ -10,7 +10,7 @@ export default function DriversCollection ({drivers, onClickDriver}) {
         driver={driver}
         onClickDriver={onClickDriver}
       /> 
-    )
+    );
 
     return (
       <div className="absolute inset-x-0 bottom-36 h-12">

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const emptyForm = {
     name: "",
@@ -8,9 +8,8 @@ const emptyForm = {
     history: ""
   }
 
-export default function TrackForm ({addTrack}) {
-
-    const [formData, setFormData] = useState(emptyForm)
+export default function TrackForm ({ addTrack }) {
+    const [ formData, setFormData ] = useState(emptyForm)
 
     const handleChange = (e) => {
       const { name, value } = e.target;

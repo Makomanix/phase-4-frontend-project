@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import TracksCollection from "./TracksCollection";
 import TrackDetails from "./TrackDetails";
 import TrackForm from "./TrackForm";
 
-export default function TracksContainer ({API}) {
-    const [ tracks, setTracks ] = useState([])
-    const [ selectedTrackId, setSelectedTrackId ] = useState(null)
+export default function TracksContainer () {
+    const [ tracks, setTracks ] = useState([]);
+    const [ selectedTrackId, setSelectedTrackId ] = useState(null);
 
     useEffect(() => {
         fetch(`/tracks`)

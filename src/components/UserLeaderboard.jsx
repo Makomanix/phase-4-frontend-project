@@ -1,7 +1,7 @@
 import React from "react";
 import RecentTimes from "./RecentTimes";
 
-export default function UserLeaderboard({time_trials}) {
+export default function UserLeaderboard({ time_trials }) {
     
     const recentTimesCard = time_trials.slice(0,10).map((time_trial) => 
       <RecentTimes

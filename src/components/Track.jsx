@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Track ({id, track, onClickTrack}) {
+export default function Track ({ track, onClickTrack }) {
     const { name, location, length, year_of_construction, history } = track;
     
     const handleClick = () => {

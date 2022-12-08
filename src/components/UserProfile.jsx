@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function UserProfile ({user}) {
-    const {name, age, country, bio, car} = user
+export default function UserProfile ({ user }) {
+    const { name, age, country, bio, car } = user;
 
     return (
         <div className='absolute left-8 top-[15%] h- w-[60%]'>

@@ -1,10 +1,9 @@
-import React, {useState, useEffect} from "react";
-import {useNavigate} from "react-router-dom";
-import SignUp from "./SignUp"
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login () {
-    const [formData, setFormData] = useState('')
-    const [errors, setErrors] = useState([])
+    const [ formData, setFormData ] = useState('')
+    const [ errors, setErrors ] = useState([])
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -14,7 +13,7 @@ export default function Login () {
         }
     }, [])
 
-    const {username, password} = formData
+    const { username, password } = formData
 
     const handleLogin = (driver) => {
         sessionStorage.setItem("user_id", driver.id);

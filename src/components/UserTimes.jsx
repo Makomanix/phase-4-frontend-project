@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import TimeTrial from "./TimeTrial";
 
-export default function UserTimes ({user, updateTimes}) {
-
-    const {time_trials, id} = user
-    const [formData, setFormData] = useState("")
+export default function UserTimes ({ user, updateTimes }) {
+    const [ formData, setFormData ] = useState("");
+    const { time_trials, id } = user;
     
     const timeTrialCards = time_trials?.map((time_trial) => 
         <TimeTrial 
@@ -12,7 +11,7 @@ export default function UserTimes ({user, updateTimes}) {
             id={time_trial.id} 
             time_trial={time_trial}
         />
-    )
+    );
 
     const handleSubmit = (e) => {
         e.preventDefault();

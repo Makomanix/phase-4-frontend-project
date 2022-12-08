@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from "react";
-import {useNavigate} from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const emptyForm = {
     name: "",
@@ -10,11 +10,11 @@ const emptyForm = {
     car: ""
 }
 
-export default function SignUp ({drivers, setDrivers}) {
-    const [formData, setFormData] = useState(emptyForm)
+export default function SignUp ({ drivers, setDrivers }) {
+    const [ formData, setFormData ] = useState(emptyForm);
     const navigate = useNavigate();
     
-    function addDriver(newDriver) {
+    const addDriver = (newDriver) => {
         setDrivers([...drivers,newDriver])
     }
     
@@ -25,7 +25,6 @@ export default function SignUp ({drivers, setDrivers}) {
         })
     }
         
-    
     const handleSubmit = (e) => {
         e.preventDefault();
         fetch(`/drivers`, {
