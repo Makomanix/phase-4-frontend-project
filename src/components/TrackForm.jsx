@@ -4,8 +4,7 @@ const emptyForm = {
     name: "",
     location: "",
     length: "",
-    year_of_construction: "",
-    history: ""
+    description: ""
   }
 
 export default function TrackForm ({ addTrack }) {
@@ -43,6 +42,8 @@ export default function TrackForm ({ addTrack }) {
           <input className="text-center rounded-md outline" name="location" type="text" placeholder="Track Location..." onChange={handleChange}></input>
           <label className="bg-slate-400 text-center rounded-md outline">Length: </label>
           <input className="text-center rounded-md outline" name="length" type="string" placeholder="in km..." onChange={handleChange}></input>
+          <label className="bg-slate-400 text-center rounded-md outline">Description: </label>
+          <input className="text-center rounded-md outline" name="description" type="string" placeholder="Description" onChange={handleChange}></input>
             </form>
               <button className="absolute bottom-0 left-[19%] w-48 xl:left-[26%]" onClick={handleSubmit}>Add Track!</button>
         </div>

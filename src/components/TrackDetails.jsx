@@ -3,7 +3,7 @@ import React from "react";
 export default function TrackDetails ({ track, admin, removeTrack, id }) {
     if (!track) return null;
 
-    const { name, location, length, year_of_construction, history } = track;
+    const { name, location, length, description } = track;
 
     const handleDelete = () => {
         fetch(`/tracks/${track.id}`, {
@@ -22,8 +22,7 @@ export default function TrackDetails ({ track, admin, removeTrack, id }) {
                 <div className='text-center font-bold underline'>{name}</div>
                 <div className='text-center font-bold text-yellow-400'>{location}</div>
                 <div className='text-center font-bold'>{length}</div>
-                <div className='text-center font-bold'>{year_of_construction}</div>
-                <div className='text-center font-bold'>{history}</div>
+                <div className='text-center font-bold'>{description}</div>
                 {admin ? <button onClick={handleDelete}>Delete!</button> : null}
             </div>
         </div>
