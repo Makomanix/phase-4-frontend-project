@@ -14,7 +14,7 @@ export default function TimeTrialsContainer() {
 
     return (
     <div>
-        <div>{ 
+        <div className="bg-slate-200">{ 
         ifUser ? 
         <UserContainer 
         onUserCreate={handleIfUser} 

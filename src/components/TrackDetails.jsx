@@ -18,7 +18,7 @@ export default function TrackDetails ({ track, admin, removeTrack, id }) {
 
     return (
         <div className = "grid h-screen place-items-center">
-            <div className="grid grid-cols-1 grid-rows-6 w-72 h-52 mb-32 bg-slate-400 mx-2 rounded-xl outline pb-2">
+            <div className="grid grid-cols-1 grid-rows-6 w-[30%] h-[35%] mb-[6%] bg-slate-400 mx-2 rounded-xl outline pb-2">
                 <div className='text-center font-bold underline'>{name}</div>
                 <div className='text-center font-bold text-yellow-400'>{location}</div>
                 <div className='text-center font-bold'>{length}</div>

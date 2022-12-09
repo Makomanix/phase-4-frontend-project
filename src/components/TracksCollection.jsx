@@ -15,8 +15,8 @@ export default function TracksCollection ({ tracks, onClickTrack, searchQuery, s
     const handleOnChange = (e) => setSearchQuery(e.target.value);
 
     return (
-        <div className="absolute inset-x-0 bottom-36 h-12">
-            <div className = "grid grid-cols-3 grid-rows-auto py-1 gap-y-3">
+        <div className="absolute left-[0%] bottom-[0%] overflow-auto h-[37%] w-full py-2">
+            <div className = "grid grid-cols-3 grid-rows-auto px-2 py-1 gap-y-3">
             {/* <input 
                   type="text" 
                   placeholder="search..." 

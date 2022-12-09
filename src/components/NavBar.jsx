@@ -19,10 +19,10 @@ export default function NavBar () {
                         <NavLink className="font-bold absolute top-4 left-[3%] underline" to="/">User Profile</NavLink>
                     {/* </button> */}
                     {/* <button className="absolute top-4 left-28 ml-1"> */}
-                    <NavLink className="font-bold absolute top-4 left-[12%] ml-1 underline" to="/drivers">drivers</NavLink>
+                    <NavLink className="font-bold absolute top-4 left-[12%] ml-1 underline" to="/drivers">Drivers</NavLink>
                     {/* </button> */}
                     {/* <button className="absolute top-4 left-48"> */}
-                    <NavLink className="font-bold absolute top-4 left-[19%] underline" to="/tracks">tracks</NavLink>
+                    <NavLink className="font-bold absolute top-4 left-[19%] underline" to="/tracks">Tracks</NavLink>
                     {/* </button> */}
                     <button className="absolute top-4 right-[4%]" onClick={handleLogOut}>Log Out</button>
                 </div>  
