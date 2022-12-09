@@ -39,7 +39,12 @@ export default function SignUp ({ drivers, setDrivers }) {
         .then((newDriver) => {
             addDriver(newDriver)
         })
+        .then(handleLogin(formData))
         .then(navigate("/")) 
+    }
+
+    const handleLogin = (formData) => {
+        sessionStorage.setItem("user_id", formData.id);
     }
 
     return (
