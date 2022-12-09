@@ -50,6 +50,9 @@ export default function TracksContainer () {
     );
 
     const removeTrack = (id) => {
+      fetch(`/tracks/${id}`, {
+        method: "DELETE"
+      })
       const newTracks = tracks.filter((track) => track.id !== id)
         setTracks(newTracks)
     }
