@@ -15,16 +15,16 @@ export default function NavBar () {
             <div className=" w-screen h-[60px] z-10 bg-slate-400 fixed drop-shadow-lg outline">
                 <h1 className='display: font-faster font-bold text-center text-4xl mt-2'>Ready Set Kart</h1>
                 <div>
-                    <button className="absolute top-4 left-2">
-                        <NavLink to="/">User Profile</NavLink>
-                    </button>
-                    <button className="absolute top-4 left-28 ml-1">
-                    <NavLink to="/drivers">drivers</NavLink>
-                    </button>
-                    <button className="absolute top-4 left-48">
-                    <NavLink to="/tracks">tracks</NavLink>
-                    </button>
-                    <button className="absolute top-4 right-[2%]" onClick={handleLogOut}>Log Out</button>
+                    {/* <button className="absolute top-4 left-2"> */}
+                        <NavLink className="font-bold absolute top-4 left-[3%] underline" to="/">User Profile</NavLink>
+                    {/* </button> */}
+                    {/* <button className="absolute top-4 left-28 ml-1"> */}
+                    <NavLink className="font-bold absolute top-4 left-[12%] ml-1 underline" to="/drivers">drivers</NavLink>
+                    {/* </button> */}
+                    {/* <button className="absolute top-4 left-48"> */}
+                    <NavLink className="font-bold absolute top-4 left-[19%] underline" to="/tracks">tracks</NavLink>
+                    {/* </button> */}
+                    <button className="absolute top-4 right-[4%]" onClick={handleLogOut}>Log Out</button>
                 </div>  
             </div>
         </div>
