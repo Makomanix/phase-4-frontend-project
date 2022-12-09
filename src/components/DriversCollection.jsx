@@ -15,7 +15,7 @@ export default function DriversCollection ({ drivers, onClickDriver, searchQuery
     const handleOnChange = (e) => setSearchQuery(e.target.value);
 
     return (
-      <div className="absolute inset-x-0 bottom-36 h-12">
+      <div className="absolute bottom-0 h-[37%] w-full overflow-auto">
         <div className="grid grid-cols-5 grid-rows-auto py-1 gap-y-3">
         {/* <input 
               type="text" 

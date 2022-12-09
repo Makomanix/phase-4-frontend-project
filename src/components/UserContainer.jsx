@@ -30,7 +30,7 @@ export default function UserContainer ({ onUserCreate }) {
         fetch(`/time_trials`)
         .then((res) => res.json())
         .then((time_trials) => setTime_Trials(time_trials));
-    },[updateTimes]);
+    },[]);
 
     const handleIfUserClick = () => {
         setIsUserTime(isUserTime => !isUserTime)
@@ -43,7 +43,8 @@ export default function UserContainer ({ onUserCreate }) {
                 <button onClick={onUserCreate}></button>
                 <UserProfile user={user}/>
                 <UserTimesForm user ={user} updateTimes={updateTimes}/>
-                <button className="absolute top-1/3 left-1/3 z-40" onClick={handleIfUserClick}>{isUserTime ? "Recently Posted Times" : "Your Times"}</button>
+                <h1 className="absolute font-bold top-[17%] left-[60%] underline z-40">{isUserTime ? "Recent Time Trials" : "Personal Time Trials"}</h1>
+                <button className="absolute top-[16%] left-[40%] mt-1 xl:mt-3 z-40" onClick={handleIfUserClick}>{isUserTime ? "Check Personal" : "Check Recent"}</button>
                 {isUserTime ? 
                 <UserLeaderboard 
                     user={user} 
