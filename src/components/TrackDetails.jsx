@@ -29,3 +29,4 @@ export default function TrackDetails ({ track, admin, removeTrack, id }) {
         </div>
     );
 }
+

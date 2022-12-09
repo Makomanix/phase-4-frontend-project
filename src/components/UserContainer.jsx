@@ -43,7 +43,7 @@ export default function UserContainer ({ onUserCreate }) {
                 <button onClick={onUserCreate}></button>
                 <UserProfile user={user}/>
                 <UserTimesForm user ={user} updateTimes={updateTimes}/>
-                <button className="absolute top-1/3 left-1/3 z-40" onClick={handleIfUserClick}>{isUserTime ? "Recently Posted Times" : "Your Times"}</button>
+                <button className="absolute top-[16%] left-[61%] mt-1 xl:mt-3 z-40" onClick={handleIfUserClick}>{isUserTime ? "Recently Time Trials" : "Your Time Trails "}</button>
                 {isUserTime ? 
                 <UserLeaderboard 
                     user={user} 
